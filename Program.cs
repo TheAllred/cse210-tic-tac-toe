@@ -19,11 +19,11 @@ namespace TicTacToe // CSE210 Tic Tac Toe Prove assignment Sept 24 Kevin Allred 
                 while (userInputRunning)
                 {
                     Console.WriteLine($"{user}'s turn!");
-                    turnCounter++;
                     string space = Console.ReadLine();
                     int spaceIndex = spaces.IndexOf(space);
                     if (spaceIndex > -1)
                     {
+                        turnCounter++;
                         spaces.RemoveAt(spaceIndex);
                         spaces.Insert(spaceIndex, user);
                         break;
